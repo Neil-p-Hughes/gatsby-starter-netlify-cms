@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import logo from "../img/PRHCLogo.min.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -41,8 +40,8 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+            <Link to="/" className="navbar-item" title={this.props.siteTitle}>
+              <img src={logo} alt={this.props.siteTitle} style={{ width: "150px", "maxHeight": "150px"}} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -63,33 +62,21 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+            <Link className="navbar-item" to="/about">
+                About us
+              </Link>
+              <Link className="navbar-item" to="/home">
+                Home
+              </Link>              
+              <Link className="navbar-item" to="/products">
+                Neighbourhood
+              </Link>
+              <Link className="navbar-item" to="/blog">
+                Photos
+              </Link> 
             </div>
           </div>
         </div>

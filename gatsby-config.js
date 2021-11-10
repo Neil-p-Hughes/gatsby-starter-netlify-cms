@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Pine Ridge Housing Co-operative",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "provides safe, sustainable, well-governed, well managed housing for a supportive community of engaged members",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

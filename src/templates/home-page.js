@@ -9,7 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({
+export const HomePageTemplate = ({
   image,
   title,
   heading,
@@ -22,8 +22,9 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <FullWidthImage img={heroImage} title="" subheading="" />
       <section className="section section--gradient">
+        
         <div className="container">
           <div className="section">
             <div className="columns">
@@ -40,9 +41,9 @@ export const IndexPageTemplate = ({
                   <div className="columns">
                     <div className="column is-12">
                       <h3 className="has-text-weight-semibold is-size-2">
-                        {intro.heading}
+                        {heading}
                       </h3>
-                      <p>{intro.description}</p>
+                      <p>{description}</p>
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
@@ -74,7 +75,7 @@ export const IndexPageTemplate = ({
   );
 };
 
-IndexPageTemplate.propTypes = {
+HomePageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -86,12 +87,12 @@ IndexPageTemplate.propTypes = {
   }),
 };
 
-const IndexPage = ({ data }) => {
+const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <HomePageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -104,7 +105,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-IndexPage.propTypes = {
+HomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -112,11 +113,11 @@ IndexPage.propTypes = {
   }),
 };
 
-export default IndexPage;
+export default HomePage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query HomePageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
       frontmatter {
         title
         image {
