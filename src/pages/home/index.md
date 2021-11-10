@@ -6,7 +6,7 @@ image: /img/ae92b4c0-fd54-412c-9507-915af95eae51.jpg
 heading: Pine Ridge Housing Co-operative
 subheading: provides safe, sustainable, well-governed, well managed housing for a supportive community of engaged members
 mainpitch:
-  title: Why pine ridge
+  title: Why pine ridge?
   description: >
     pr is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
